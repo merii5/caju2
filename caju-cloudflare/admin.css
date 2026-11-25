@@ -1,0 +1,431 @@
+.studio-admin,
+.studio-login {
+  --studio-ink: #282622;
+  --studio-muted: #625d55;
+  --studio-line: #ded8cf;
+  --studio-paper: #faf8f4;
+  background: var(--studio-paper);
+  color: var(--studio-ink);
+  font-family: system-ui, sans-serif;
+}
+
+.studio-shell {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  min-height: 100svh;
+}
+
+.studio-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 1.25rem;
+  background: #302820;
+  color: #f9f4ec;
+}
+
+.studio-wordmark {
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: 750;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+}
+
+.studio-links {
+  width: 100%;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.studio-links a,
+.studio-public-link {
+  color: inherit;
+  padding: 0.65rem 0.8rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+}
+
+.studio-links a:hover,
+.studio-public-link:hover,
+.studio-links a[aria-current="page"] {
+  background: #504338;
+}
+
+.studio-links a[aria-current="page"] {
+  font-weight: 700;
+}
+
+.studio-public-link {
+  margin-top: auto;
+}
+
+.studio-main {
+  width: 100%;
+  max-width: 77rem;
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+  overflow-wrap: anywhere;
+}
+
+.studio-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--studio-line);
+}
+
+.studio-header h1,
+.studio-login-card h1 {
+  color: var(--studio-ink);
+  font: 700 clamp(1.75rem, 4vw, 2.65rem)/1.15 system-ui, sans-serif;
+  letter-spacing: -0.045em;
+}
+
+.studio-session {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--studio-muted);
+}
+
+.studio-main .panel {
+  margin-top: 1rem;
+  padding: clamp(1rem, 3vw, 1.75rem);
+  border: 1px solid var(--studio-line);
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow: 0 2px 8px #30282009;
+}
+
+.studio-main .panel h2 {
+  font: 650 1.2rem/1.3 system-ui, sans-serif;
+}
+
+.studio-main .button,
+.studio-login .button {
+  border-radius: 0.55rem;
+  min-height: 2.65rem;
+}
+
+.studio-main .input-preview,
+.studio-login .input-preview {
+  border-radius: 0.55rem;
+  color: var(--studio-ink);
+  background: #fff;
+  border: 1px solid var(--studio-line);
+}
+
+.studio-admin :focus-visible,
+.studio-login :focus-visible {
+  outline: 2px solid #876550;
+  outline-offset: 3px;
+}
+
+.studio-settings {
+  max-width: 44rem;
+}
+
+.studio-settings label,
+.studio-login-card label {
+  font-weight: 650;
+}
+
+.studio-settings small,
+.studio-settings p,
+.studio-back {
+  color: var(--studio-muted);
+}
+
+.studio-settings textarea {
+  min-height: auto;
+  resize: vertical;
+}
+
+.studio-settings button {
+  justify-self: start;
+}
+
+.studio-login-layout {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.studio-login-image {
+  background: #6b5040 url('/images/ana-sayfa-atolye.png') center / cover no-repeat;
+}
+
+.studio-login-content {
+  min-width: 0;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: start;
+  justify-items: start;
+  gap: 2rem;
+}
+
+.studio-login-card {
+  width: min(100%, 29rem);
+  align-self: center;
+  justify-self: center;
+  padding: clamp(1.15rem, 4vw, 2.3rem);
+  background: #fff;
+  border: 1px solid var(--studio-line);
+  border-radius: 1rem;
+  box-shadow: 0 12px 45px #3028200d;
+}
+
+.studio-login-card form {
+  margin-top: 1.5rem;
+}
+
+.studio-login-card form > button {
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.studio-metrics,
+.studio-filters {
+  display: grid;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.studio-metrics {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+}
+
+.studio-metric {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--studio-line);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.studio-metric dt,
+.studio-booking-meta dt,
+.studio-record-header p,
+.studio-results {
+  color: var(--studio-muted);
+  font-size: 0.875rem;
+}
+
+.studio-metric dd {
+  font-size: 1.65rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.studio-metric.is-new dd {
+  color: #683b23;
+}
+
+.studio-metric.is-done dd {
+  color: #294c36;
+}
+
+.studio-filters {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10.5rem), 1fr));
+  align-items: end;
+  padding: 1rem;
+  border: 1px solid var(--studio-line);
+  border-radius: 0.75rem;
+  background: #fff;
+}
+
+.studio-filters label,
+.studio-status-form label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.studio-filters .input-preview {
+  min-width: 0;
+  width: 100%;
+}
+
+.studio-results {
+  margin: 1.25rem 0 0.5rem;
+}
+
+.studio-records {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.studio-record,
+.studio-empty {
+  display: grid;
+  gap: 0.9rem;
+  padding: clamp(0.85rem, 2.5vw, 1.35rem);
+  background: #fff;
+  border: 1px solid var(--studio-line);
+  border-radius: 0.8rem;
+}
+
+.studio-record-unread {
+  border-inline-start: 3px solid #976344;
+}
+
+.studio-record-header,
+.studio-record-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.studio-record-header h2 {
+  font: 700 1.12rem/1.35 system-ui, sans-serif;
+}
+
+.studio-badge {
+  flex: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2rem;
+  background: #f2eee8;
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+
+.studio-badge.is-new {
+  color: #683b23;
+  background: #f6e7d8;
+}
+
+.studio-badge.is-done {
+  color: #294c36;
+  background: #e5f0e7;
+}
+
+.studio-badge.is-muted {
+  color: #514a42;
+}
+
+.studio-booking-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: 0.75rem;
+}
+
+.studio-booking-meta dd {
+  margin-top: 0.2rem;
+}
+
+.studio-contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.8rem;
+}
+
+.studio-contact-links a {
+  color: var(--brown-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.studio-message-text {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  background: var(--studio-paper);
+  white-space: pre-wrap;
+}
+
+.studio-record-footer {
+  align-items: end;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--studio-line);
+}
+
+.studio-status-form {
+  display: grid;
+  grid-template-columns: minmax(0, 10rem) auto;
+  gap: 0.35rem 0.55rem;
+  align-items: center;
+}
+
+.studio-status-form label {
+  grid-column: 1 / -1;
+}
+
+.studio-status-form select {
+  min-width: 0;
+}
+
+.studio-delete {
+  max-width: 22rem;
+  font-size: 0.875rem;
+}
+
+.studio-delete summary {
+  cursor: pointer;
+  color: #81392e;
+}
+
+.studio-delete form {
+  margin-top: 0.55rem;
+}
+
+.studio-delete button {
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 760px) {
+  .studio-shell,
+  .studio-login-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .studio-sidebar {
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .studio-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .studio-links a,
+  .studio-public-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .studio-main .input-preview,
+  .studio-login .input-preview {
+    font-size: 1rem;
+  }
+
+  .studio-public-link {
+    padding: 0.45rem 0;
+  }
+
+  .studio-login-layout {
+    grid-template-rows: clamp(7rem, 22vh, 12rem) 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .studio-status-form {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .studio-record-footer .button {
+    max-width: 100%;
+    padding-inline: 0.85rem;
+  }
+}

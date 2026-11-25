@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{*.html,*.css,script.js,admin-editor.js,images/**}"
+    }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/api/index?__caju_path=/" },
+    { "source": "/:path*", "destination": "/api/index?__caju_path=/:path*" }
+  ]
+}

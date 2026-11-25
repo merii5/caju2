@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İletişim &amp; Randevu — CAJU CLAY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Üst Menü (Geniş & Ferah) -->
+  <header class="navbar">
+    <a class="brand" href="index.html">CAJU CLAY</a>
+    <button type="button" class="nav-toggle" aria-controls="site-navigation" aria-expanded="false">Menü</button>
+    <div class="navbar-menu" id="site-navigation">
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="koleksiyon.html">Koleksiyon</a>
+        <a href="felsefemiz.html">Felsefemiz &amp; Yolculuk</a>
+        <a href="atolye.html">Atölye</a>
+        <a href="iletisim.html" class="active" aria-current="page">İletişim &amp; Randevu</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button" href="https://www.shopier.com/cajuclay" target="_blank" rel="noopener">Shopier ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sayfa Başlığı (Kompakt & Geniş Şerit) -->
+  <section class="page-header">
+    <span class="label">İletişim &amp; Randevu</span>
+    <h1>Kahvemizi içmeye bekleriz.</h1>
+    <p>Atölyeye katılmak, stüdyomuzu ziyaret etmek veya aklınızdaki bir fikri paylaşmak için buradayız. Bize yazın ya da seramik deneyiminiz için randevu talebi oluşturun.</p>
+<div class="contact-jump-links"><a class="button" href="#randevu">Randevu Oluştur ↗</a><a class="button secondary" href="#mesaj">Bize Yazın ↗</a></div>
+  </section>
+
+  <main class="page">
+
+  <!-- İletişim Kartları -->
+  <section class="section" style="padding-top: 48px;">
+    <div class="contact-info-grid">
+      <div class="contact-card">
+        <div class="c-icon">📍</div>
+        <h3>Atölye Adresi</h3>
+        <p>Bahçecity Residence
+Tahtakale Mah., Fırat 1. Cad. No:12
+34325 <br>Avcılar / İstanbul</p>
+        <small style="display: block; margin-top: 10px;">Hafta içi 10.00–16.00<br>Hafta sonu 13.00–17.00</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="c-icon">📞</div>
+        <h3>Telefon &amp; WhatsApp</h3>
+        <p><a href="tel:+905395884736">+90 539 588 47 36</a></p>
+        <small style="display: block; margin-top: 10px;">Hızlı yanıt için WhatsApp hattımızdan yazabilirsiniz.</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="c-icon">✉️</div>
+        <h3>E-posta &amp; İş Birlikleri</h3>
+        <p><a href="mailto:ceydaerten.ce@icloud.com">ceydaerten.ce@icloud.com</a></p>
+        <small style="display: block; margin-top: 10px;">Restoran, kafe ve kurumsal hediye talepleri için.</small>
+      </div>
+    </div>
+
+    <!-- Mesaj Formu ve Görsel -->
+    <div class="two-columns" id="mesaj">
+      <div class="panel">
+        <h3>Bize mesaj gönderin</h3>
+        <p>Aklınızdaki soruları veya özel tasarım fikirlerinizi iletin; 24 saat içinde size dönüş yapalım.</p>
+        
+        <!-- message-status -->
+        <form id="contactForm" class="booking-fields" method="post" action="/mesaj#mesaj">
+          <div>
+            <label class="field-label" for="contactName">Adınız Soyadınız *</label>
+            <input type="text" id="contactName" name="contactName" class="input-preview" autocomplete="name" minlength="2" maxlength="100" required placeholder="Adınız Soyadınız">
+          </div>
+          <div>
+            <label class="field-label" for="contactEmail">E-posta Adresiniz *</label>
+            <input type="email" id="contactEmail" name="contactEmail" class="input-preview" autocomplete="email" maxlength="254" required>
+          </div>
+          <div>
+            <label class="field-label" for="contactPhone">Telefon Numaranız *</label>
+            <input type="tel" id="contactPhone" name="contactPhone" class="input-preview" autocomplete="tel" minlength="10" maxlength="24" required>
+          </div>
+          <div>
+            <label class="field-label" for="contactSubject">Konu</label>
+            <select id="contactSubject" name="contactSubject" class="input-preview">
+              <option value="Ürün Siparişi">Ürün Siparişi &amp; Özel İstek</option>
+              <option value="Workshop &amp; Özel Ders">Workshop &amp; Özel Ders Bilgisi</option>
+              <option value="Kurumsal İş Birliği">Kurumsal Hediye &amp; Kafe / Restoran Talebi</option>
+              <option value="Genel Soru">Genel Soru</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="contactMsg">Mesajınız *</label>
+            <textarea id="contactMsg" name="contactMsg" class="input-preview note" maxlength="1500" required placeholder="Mesajınızı buraya yazabilirsiniz..."></textarea>
+          </div>
+          <button type="submit" class="button booking-button">Mesajı Gönder</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="rounded workshop-image">
+          <img src="images/iletisim-seramik.png" alt="Caju Clay yazısının arkasında zincir detaylı açık renk seramik vazo" loading="lazy">
+        </div>
+        <div style="margin-top: 24px; text-align: center;">
+          <span class="quote">“Toprağa dokunmak, doğayla yeniden bağ kurmaktır.”</span>
+          <small>Instagram: <a href="https://instagram.com" target="_blank" style="text-decoration: underline; color: var(--brown);">@cajuclay</a></small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Randevu Grid & Detaylar -->
+  <section class="section" id="randevu" style="padding-top: 48px;">
+    <div class="section-heading"><div><span class="label">Atölyede Buluşalım</span><h2>Çamura birlikte şekil verelim.</h2></div><p>Seansınızı seçin, tercih ettiğiniz tarihi paylaşın ve randevu talebinizi oluşturun.</p></div>
+    <div class="booking-grid">
+      <!-- Panel 1: Workshop Detayları -->
+      <article class="panel">
+        <h3>Workshop detayları</h3>
+        <p>Çocuk ve yetişkin seramik workshoplarında çamuru şekillendirebilir, seramik boyama workshopunda bir parçayı kendi renkleriniz ve desenlerinizle boyayabilirsiniz.</p>
+        
+        <div class="detail-list">
+          <div class="detail">
+            <span class="detail-icon" aria-hidden="true">◷</span>
+            <div><b>Süre</b><p>2 – 2.5 saat</p></div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon" aria-hidden="true">◎</span>
+            <div><b>Katılım</b><p>Maksimum 6–8 kişi (Butik grup)</p></div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon" aria-hidden="true">◇</span>
+            <div><b>Malzemeler</b><p>Seçilen workshopa göre çamur, şekillendirme araçları, fırçalar ve boyalar</p></div>
+          </div>
+          <div class="detail">
+            <span class="detail-icon" aria-hidden="true">♧</span>
+            <div><b>Misafirperverlik</b><p>Taze bitki çayları, kahve ve stüdyo ikramları</p></div>
+          </div>
+        </div>
+        
+        <div style="background: white; padding: 20px; border-radius: 16px; border: 1px solid var(--border); margin-top: 24px;">
+          <small><strong>Eser Teslimi:</strong> Atölyeden kendi ellerinizle şekillendirdiğiniz parça, stüdyomuzda yavaşça kurutulduktan sonra 950°C ve 1240°C çift fırınlanıp sırlanır. Yaklaşık 2-3 hafta sonra teslim alabilirsiniz.</small>
+        </div>
+      </article>
+
+      <!-- Panel 2: Randevu Formu -->
+      <div class="panel">
+        <h3>Randevu talebi oluşturun</h3>
+        <p>Tarih ve katılımcı sayınızı belirtin. Ekibimiz en kısa sürede WhatsApp üzerinden kontenjan teyidi için sizinle iletişime geçecektir.</p>
+        
+        <!-- booking-status -->
+        <form id="bookingForm" class="booking-fields" method="post" action="/randevu#randevu">
+          <div>
+            <label class="field-label" for="bookName">Adınız Soyadınız *</label>
+            <input type="text" autocomplete="name" minlength="2" maxlength="100" id="bookName" name="name" class="input-preview" required placeholder="Adınız Soyadınız">
+          </div>
+          <div>
+            <label class="field-label" for="bookEmail">E-posta Adresiniz *</label>
+            <input type="email" autocomplete="email" maxlength="254" id="bookEmail" name="email" class="input-preview" required>
+          </div>
+          <div>
+            <label class="field-label" for="bookPhone">Telefon Numaranız *</label>
+            <input type="tel" minlength="10" maxlength="24" id="bookPhone" name="phone" class="input-preview" autocomplete="tel" required>
+          </div>
+          <div>
+            <label class="field-label" for="bookType">Atölye Türü</label>
+            <select id="bookType" name="workshop" class="input-preview">
+              <option value="Çocuk Seramik Workshopu">Çocuk Seramik Workshopu (1.000 ₺)</option>
+              <option value="Yetişkin Seramik Workshopu">Yetişkin Seramik Workshopu (1.500 ₺)</option>
+              <option value="Seramik Boyama Workshopu">Seramik Boyama Workshopu (1.500 ₺)</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="bookDate">Tercih Edilen Tarih *</label>
+            <input type="date" required id="bookDate" name="date" class="input-preview">
+          </div>
+          <div>
+            <label class="field-label" for="bookPersons">Katılımcı Sayısı</label>
+            <select id="bookPersons" name="persons" class="input-preview">
+              <option value="1 kişi">1 kişi</option>
+              <option value="2 kişi">2 kişi</option>
+              <option value="3 kişi">3 kişi</option>
+              <option value="4 kişi">4 kişi</option>
+              <option value="5–8 kişi">5–8 kişi (Özel Grup)</option>
+            </select>
+          </div>
+          <div>
+            <label class="field-label" for="bookNote">Özel Not veya İstekler</label>
+            <textarea maxlength="1000" id="bookNote" name="note" class="input-preview note" placeholder="Özel gün kutlaması, hediye kartı talebi veya tercih ettiğiniz saat aralığı..."></textarea>
+          </div>
+          
+          <p class="booking-note"><small>Randevunuz, atölye ekibinin kontenjan teyidinden sonra kesinleşir.</small></p>
+          <button type="submit" class="button booking-button">Randevu Talebini Gönder</button>
+        </form>
+
+        <p style="margin:18px 0 0"><small>Ücretlendirme ve ödeme adımı kontenjan teyidinin ardından tamamlanmaktadır.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sıkça Sorulan Sorular -->
+  <section class="section sand">
+    <div class="centered">
+      <span class="label">Bilgilendirme</span>
+      <h2>Atölyeye gelmeden önce merak edilenler.</h2>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 20px;">
+      <div style="background: white; padding: 24px 28px; border-radius: 16px; border: 1px solid var(--border);">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">Ne giymeliyim?</h4>
+        <p style="font-size: 14px;">Stüdyomuzda önlük temin ediyoruz. Ancak rahat, kirlenmesinden çekinmeyeceğiniz kıyafetler ve rahat ayakkabılar giymenizi öneririz. Çamur suyla kolayca çıkar.</p>
+      </div>
+
+      <div style="background: white; padding: 24px 28px; border-radius: 16px; border: 1px solid var(--border);">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">Daha önce hiç seramik yapmadım, katılabilir miyim?</h4>
+        <p style="font-size: 14px;">Kesinlikle evet! Seanslarımız temel seviyeden başlar ve eğitmenlerimiz her adımda birebir destek sunar.</p>
+      </div>
+
+      <div style="background: white; padding: 24px 28px; border-radius: 16px; border: 1px solid var(--border);">
+        <h4 style="font-size: 18px; margin-bottom: 8px;">İptal ve tarih değişikliği yapabilir miyim?</h4>
+        <p style="font-size: 14px;">Seans tarihinden 48 saat öncesine kadar bildirimde bulunarak randevunuzu ileri bir tarihe erteleyebilirsiniz.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  </main>
+
+  <!-- Footer (Full Width) -->
+  <footer class="footer sand" id="iletisim">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">CAJU CLAY</a>
+        <p>Caju Clay, çamurun dinginliğini modern yaşam alanlarına taşıyan, el işçiliği butik seramik markası ve atölyesidir.</p>
+      </div>
+      <div>
+        <h4>Keşfet</h4>
+        <div class="footer-links">
+          <a href="koleksiyon.html">Tüm Koleksiyon</a>
+          <a href="https://www.shopier.com/cajuclay#SUNUMLUK" target="_blank" rel="noopener">Sofra Takımları</a>
+          <a href="https://www.shopier.com/cajuclay#KUPA" target="_blank" rel="noopener">Günlük Kupalar</a>
+          <a href="https://www.shopier.com/cajuclay#PE%C3%87ETE%20Y%C3%9CZ%C3%9CKLER%C4%B0" target="_blank" rel="noopener">Peçetelikler</a>
+        </div>
+      </div>
+      <div>
+        <h4>Stüdyo</h4>
+        <div class="footer-links">
+          <a href="felsefemiz.html">Felsefemiz &amp; Yolculuk</a>
+          <a href="atolye.html">Atölye ve Workshoplar</a>
+          <a href="iletisim.html#randevu">Randevu Al</a>
+        </div>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <div class="footer-links">
+          <a href="mailto:ceydaerten.ce@icloud.com">ceydaerten.ce@icloud.com</a>
+          <a href="tel:+905395884736">+90 539 588 47 36</a>
+          <span>Bahçecity Residence<br>Tahtakale Mah., Fırat 1. Cad. No:12<br>34325 Avcılar / İstanbul</span>
+          <a href="iletisim.html" style="font-weight: 700; color: var(--brown); margin-top: 6px;">İletişim Sayfası &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CAJU CLAY Ceramics. Tüm Hakları Saklıdır.</span>
+      <div class="footer-legal">
+        <span>Mesafeli Satış Sözleşmesi</span>
+        <span>Gizlilik Politikası</span>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
