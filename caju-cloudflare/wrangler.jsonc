@@ -17,7 +17,7 @@
     {
       "binding": "DB",
       "database_name": "caju-clay",
-      "database_id": "00000000-0000-0000-0000-000000000000"
+      "database_id": "7e80fded-d403-4966-9a82-0a900b994840"
     }
   ],
   "observability": { "enabled": true }
